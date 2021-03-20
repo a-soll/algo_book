@@ -1,0 +1,17 @@
+{
+    "code-runner.executorMapByFileExtension": {
+        ".c": "cd $dir && cc $fileName && ./a.out"
+    },
+    "C_Cpp.default.compilerPath": "/usr/local/bin/gcc-10",
+    "files.exclude": {
+        "**/*.dSYM": true,
+        "**/.DS_Store": true
+    },
+    "code-runner.executorMap": {
+        "c": "cd $dir && gcc $fileName -o a.out && ./a.out",
+    },
+    "code-runner.runInTerminal": true,
+    "files.associations": {
+        "stdio.h": "c"
+    },
+}
