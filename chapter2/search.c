@@ -13,11 +13,13 @@ int main() {
         - ind eauals the index val is found (NULL, because no index searched yet)
 
         Maintenance
-        - loop is moving a[]
-        - ind equals index val is found
+        - loop is moving a[j++]
+        - ind is set to the index that matches val
 
         Termination
-        - j = len + 1
+        - termination condition is j >= len
+        - because each iteration increases j by 1, termination will end
+        with j = len
         - final result is ind equals the index of the array
         val is found in
    */

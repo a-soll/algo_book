@@ -16,8 +16,8 @@ int main() {
         - increments j for next iteration, preserving invariant
 
         Termination
-        - termination condition is j > a.length = n
-        - because each iteration increases j by 1, termination must have j = n + 1
+        - termination condition is j >= a.length = n
+        - because each iteration increases j by 1, termination must have j = n
         - we end up with a[0..n] being original elements, but in sorted order
         - because subarray a[0..n] is entire array, we know it's sorted
     */
