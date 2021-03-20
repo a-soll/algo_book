@@ -4,7 +4,7 @@
 int main() {
     int len = 6;
     int a[6] = {1, 5, 12, 7, 32, 6};
-    int val = 112;
+    int val = 7;
     int ind = '\0';
     int j;
 
