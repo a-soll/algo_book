@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+#define LENGTH 4
+#define RESULT 5
+
 void parr(int arr[], int len) {
     for (int i = 0; i < len; i++) {
         printf("%d ", arr[i]);
@@ -8,13 +11,12 @@ void parr(int arr[], int len) {
 }
 
 int main() {
-    int len = 4;
-    int a[4] = {1, 0, 0, 1};
-    int b[4] = {0, 0, 1, 1};
-    int c[5];
+    int a[LENGTH] = {1, 0, 0, 1};
+    int b[LENGTH] = {0, 0, 1, 1};
+    int c[RESULT];
     int carry = 0;
 
-    for (int i = len - 1; i >= 0; i--) {
+    for (int i = LENGTH - 1; i >= 0; i--) {
         int sum = a[i] + b[i] + carry;
 
         if (sum == 2) {
@@ -29,7 +31,7 @@ int main() {
         }
     }
     c[0] = carry;
-    parr(c, len + 1);
+    parr(c, RESULT);
 
     return 0;
 }
