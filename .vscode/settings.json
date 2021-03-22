@@ -7,11 +7,14 @@
         "**/*.dSYM": true,
         "**/.DS_Store": true
     },
-    "code-runner.executorMap": {
-        "c": "cd $dir && gcc $fileName -o a.out && ./a.out",
+    "code-runner.executorMapByGlob": {
+        "decrementing-order.c": "cd $dir && gcc -o a.out $fileName ../util.c && ./a.out",
+        "selection-sort.c": "cd $dir && gcc -o a.out $fileName ../util.c && ./a.out",
+        "merge-sort.c": "cd $dir && gcc -o a.out $fileName ../util.c && ./a.out"
     },
     "code-runner.runInTerminal": true,
     "files.associations": {
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "util.h": "c"
     },
 }

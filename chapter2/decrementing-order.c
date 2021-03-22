@@ -1,15 +1,6 @@
 // 03-20-2021
 #include <stdio.h>
-
-void parr(int a[]) {
-    int k = 0;
-
-    while (a[k]) {
-        printf("%d ", a[k]);
-        k++;
-    }
-    printf("\n");
-}
+#include "../util.h"
 
 // insertion sort to get decrementing order
 int main() {
@@ -26,6 +17,6 @@ int main() {
         }
         a[i + 1] = key;
     }
-    parr(a);
+    parr(a, 6);
     return 0;
 }
