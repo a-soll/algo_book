@@ -2,7 +2,7 @@
     "code-runner.executorMapByFileExtension": {
         ".c": "cd $dir && cc $fileName && ./a.out"
     },
-    "C_Cpp.default.compilerPath": "/usr/local/bin/gcc-10",
+    "C_Cpp.default.compilerPath": "/usr/local/bin/gcc-11",
     "files.exclude": {
         "**/*.dSYM": true,
         "**/.DS_Store": true
