@@ -18,7 +18,7 @@
             "internalConsoleOptions": "openOnSessionStart",
         },
         {
-            "name": "gcc-10",
+            "name": "with util",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/a.out",
@@ -27,7 +27,7 @@
             "cwd": "${fileDirname}",
             "environment": [],
             "MIMode": "lldb",
-            "preLaunchTask": "C/C++: gcc-10 build active file",
+            "preLaunchTask": "with util task",
             "internalConsoleOptions": "openOnSessionStart",
         }
     ]

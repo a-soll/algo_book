@@ -1,57 +1,53 @@
-// 03-21-2021
+// 10-11-2021
 #include "../util.h"
 #include <stdio.h>
 
-#define LENGTH 4
+#define LENGTH 8
 
-void merge(int a[], int start, int q, int end) {
-    int n1 = q - start + 1;
-    int n2 = end - q;
-    int i;
-    int j;
-    int R[n1 + 1];
-    int L[n2 + 1];
+void merge(int arr[], int start, int middle, int end) {
+    int l_size = (middle - start) + 1;
+    int r_size = end - middle;
+    int L[l_size];
+    int R[r_size];
 
-    for (int i = 0; i < n1; i++) {
-        L[i] = a[start + i - 1];
+    for (int i = 0; i < l_size; i++) {
+        L[i] = arr[start + i - 1];
     }
-    for (int j = 0; j < n2; j++) {
-        R[j] = a[q + j];
+    for (int j = 0; j < r_size; j++) {
+        R[j] = arr[j + middle];
     }
 
-    L[n1 + 1] = 99;
-    R[n2 + 1] = 99;
-    i = 0;
-    j = 0;
+    int i = 0;
+    int j = 0;
 
+    /*
+        - loop from start to end, sorting both halves
+        - need to make sure k and j aren't bigger than L/R size to prevent adding out of bounds trash
+     */
     for (int k = start - 1; k < end; k++) {
-        if (L[i] <= R[j]) {
-            a[k] = L[i];
+        if ((L[i] <= R[j] || j >= r_size) && i < l_size) {
+            arr[k] = L[i];
             i++;
         } else {
-            a[k] = R[j];
+            arr[k] = R[j];
             j++;
         }
     }
 }
 
-void sort(int a[], int start, int end) {
+void sort(int arr[], int start, int end) {
     if (start < end) {
-        int q = (start + end) / 2;
+        int middle = (start + end) / 2;
 
-        sort(a, start, q);
-        sort(a, q + 1, end);
-        merge(a, start, q, end);
-        // printf("%d\n", q);
-        parr(a, LENGTH);
+        sort(arr, start, middle);
+        sort(arr, middle + 1, end);
+        merge(arr, start, middle, end);
     }
 }
 
 int main() {
-    int a[LENGTH] = {4, 3, 2, 1};
+    int arr[LENGTH] = {3, 41, 52, 26, 38, 57, 9, 49};
 
-    sort(a, 1, LENGTH);
-
-    // parr(a, LENGTH);
-    return 0;
+    sort(arr, 1, LENGTH);
+    parr(arr, LENGTH);
 }

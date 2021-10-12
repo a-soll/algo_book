@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "no util task",
-            "command": "/usr/local/bin/gcc-10",
+            "command": "gcc",
             "args": [
                 "-g",
                 "${file}",
@@ -24,8 +24,8 @@
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc-10 build active file",
-            "command": "/usr/local/bin/gcc-10",
+            "label": "with util task",
+            "command": "gcc",
             "args": [
                 "-g",
                 "-o",
